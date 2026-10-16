@@ -1,783 +1,614 @@
-v<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-    content="Ritvik Sahay | Student, Space Enthusiast, ICT Captain, Writer and Creator">
-
-  <title>Ritvik Sahay</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --black: #050505;
-      --white: #f5f5f5;
-      --yellow: #ffd60a;
-      --gray: #a5a5a5;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-                   "Segoe UI", sans-serif;
-      overflow-x: hidden;
-    }
-
-    /* Animated stars */
-
-    #stars {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-
-    /* Yellow background glow */
-
-    .glow {
-      position: fixed;
-      width: 450px;
-      height: 450px;
-      border-radius: 50%;
-      background: rgba(255, 214, 10, 0.12);
-      filter: blur(100px);
-      top: -150px;
-      right: -120px;
-      z-index: -1;
-      animation: floatingGlow 8s ease-in-out infinite;
-    }
-
-    @keyframes floatingGlow {
-      50% {
-        transform: translate(25px, 35px) scale(1.1);
-      }
-    }
-
-    /* Navigation */
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 20;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 22px 7%;
-
-      background: rgba(5, 5, 5, 0.65);
-      backdrop-filter: blur(20px);
-
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .logo-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background: var(--yellow);
-      border-radius: 50%;
-      margin-left: 4px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
-      opacity: 0.8;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--yellow);
-      opacity: 1;
-    }
-
-    /* Sections */
-
-    section {
-      max-width: 1250px;
-      margin: auto;
-      padding: 120px 7%;
-    }
-
-    /* Hero */
-
-    .hero {
-      min-height: 100vh;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
-      padding-top: 130px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-
-      padding: 9px 15px;
-
-      border: 1px solid rgba(255,214,10,0.5);
-      border-radius: 999px;
-
-      color: var(--yellow);
-
-      font-size: 12px;
-      font-weight: 700;
-
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-
-      background: rgba(255,214,10,0.05);
-
-      margin-bottom: 28px;
-    }
-
-    .pulse {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--yellow);
-
-      animation: pulse 1.4s infinite;
-    }
-
-    @keyframes pulse {
-      50% {
-        opacity: 0.2;
-        transform: scale(0.6);
-      }
-    }
-
-    h1 {
-      font-size: clamp(4rem, 13vw, 10rem);
-      line-height: 0.86;
-
-      letter-spacing: -0.075em;
-
-      font-weight: 800;
-
-      transition: transform 0.15s ease;
-    }
-
-    h1 span {
-      color: var(--yellow);
-    }
-
-    .hero-description {
-      max-width: 700px;
-
-      margin: 35px auto 0;
-
-      color: #cfcfcf;
-
-      font-size: clamp(17px, 2.2vw, 23px);
-
-      line-height: 1.5;
-    }
-
-    .scroll-text {
-      margin-top: 55px;
-
-      color: var(--gray);
-
-      font-size: 12px;
-
-      letter-spacing: 0.15em;
-
-      text-transform: uppercase;
-
-      animation: bob 2s infinite;
-    }
-
-    @keyframes bob {
-      50% {
-        transform: translateY(8px);
-      }
-    }
-
-    /* Moving banner */
-
-    .marquee {
-      overflow: hidden;
-
-      white-space: nowrap;
-
-      padding: 20px 0;
-
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-
-      color: var(--yellow);
-
-      font-size: 13px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.15em;
-    }
-
-    .marquee-track {
-      display: inline-block;
-
-      animation: marquee 22s linear infinite;
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Section headings */
-
-    .section-label {
-      color: var(--yellow);
-
-      font-size: 13px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.16em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: clamp(2.5rem, 6vw, 5.5rem);
-
-      line-height: 0.95;
-
-      letter-spacing: -0.06em;
-
-      margin-bottom: 28px;
-    }
-
-    /* About */
-
-    .about-text {
-      max-width: 900px;
-
-      color: #d0d0d0;
-
-      font-size: clamp(18px, 2.2vw, 25px);
-
-      line-height: 1.55;
-    }
-
-    /* Cards */
-
-    .cards {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 18px;
-
-      margin-top: 45px;
-    }
-
-    .card {
-      padding: 30px;
-
-      min-height: 230px;
-
-      border-radius: 28px;
-
-      background: linear-gradient(
-        145deg,
-        #171717,
-        #0a0a0a
-      );
-
-      border: 1px solid rgba(255,255,255,0.09);
-
-      transition: 0.35s;
-    }
-
-    .card:hover {
-      transform: translateY(-9px);
-
-      border-color: rgba(255,214,10,0.5);
-
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    }
-
-    .card small {
-      color: var(--yellow);
-
-      font-weight: 800;
-
-      letter-spacing: 0.08em;
-    }
-
-    .card h3 {
-      margin: 20px 0 12px;
-
-      font-size: 26px;
-
-      letter-spacing: -0.03em;
-    }
-
-    .card p {
-      color: #aaa;
-
-      line-height: 1.5;
-    }
-
-    /* Contact */
-
-    .contact {
-      min-height: 70vh;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      align-items: center;
-
-      text-align: center;
-    }
-
-    .email {
-      display: inline-block;
-
-      margin-top: 15px;
-
-      padding: 15px 22px;
-
-      background: var(--yellow);
-
-      color: #050505;
-
-      border-radius: 999px;
-
-      text-decoration: none;
-
-      font-weight: 800;
-
-      transition: 0.25s;
-
-      word-break: break-all;
-    }
-
-    .email:hover {
-      transform: scale(1.05);
-
-      box-shadow: 0 0 35px rgba(255,214,10,0.25);
-    }
-
-    /* Footer */
-
-    footer {
-      padding: 35px 7%;
-
-      text-align: center;
-
-      border-top: 1px solid rgba(255,255,255,0.08);
-
-      color: #777;
-
-      font-size: 13px;
-    }
-
-    /* Mobile */
-
-    @media (max-width: 800px) {
-
-      nav {
-        padding: 18px 5%;
-      }
-
-      nav .links {
-        display: none;
-      }
-
-      section {
-        padding: 90px 6%;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        min-height: auto;
-      }
-
-      h1 {
-        font-size: clamp(4rem, 19vw, 7rem);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ritvik Sahay">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ritvik Sahay | Personal Portfolio</title>
 </head>
 
 <body>
 
-  <canvas id="stars"></canvas>
-
-  <div class="glow"></div>
-
-  <!-- Navigation -->
-
-  <nav>
-
-    <div class="logo">
-      Ritvik<span class="logo-dot"></span>
-    </div>
-
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#books">Books</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-  </nav>
-
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <div>
-
-        <div class="badge">
-          <span class="pulse"></span>
-          New website in progress
-        </div>
-
-        <h1>
-          Ritvik<br>
-          <span>Sahay.</span>
-        </h1>
-
-        <p class="hero-description">
-          Student • Space Enthusiast • ICT Captain • Content Advisor at BitBuzz
-        </p>
-
-        <div class="scroll-text">
-          Scroll to explore ↓
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- MOVING TEXT -->
-
-    <div class="marquee">
-
-      <div class="marquee-track">
-
-        WRITER · SPACE ENTHUSIAST · ICT CAPTAIN · CREATOR · CODER ·
-        WRITER · SPACE ENTHUSIAST · ICT CAPTAIN · CREATOR · CODER ·
-
-      </div>
-
-    </div>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-      <div class="section-label">
-        About me
-      </div>
-
-      <h2>
-        Building, writing,<br>
-        and looking upward.
-      </h2>
-
-      <p class="about-text">
-
-        I’m Ritvik Sahay, a student, writer, space enthusiast and ICT Captain
-        who loves turning ideas into stories, projects and websites.
-
-        I write books, explore technology and space, work on digital projects,
-        and create content with BitBuzz.
-
-        This website is currently being built, so consider this page the
-        launchpad for what comes next.
-
-      </p>
-
-    </section>
-
-
-    <!-- BOOKS -->
-
-    <section id="books">
-
-      <div class="section-label">
-        My books
-      </div>
-
-      <h2>
-        Stories I've<br>
-        put into orbit.
-      </h2>
-
-
-      <div class="cards">
-
-        <div class="card">
-
-          <small>
-            BOOK 01 · BRIBOOKS
-          </small>
-
-          <h3>
-            The Galaxy Escape
-          </h3>
-
-          <p>
-            A published adventure from my growing collection of stories.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <small>
-            BOOK 02 · BRIBOOKS
-          </small>
-
-          <h3>
-            The Rescue
-          </h3>
-
-          <p>
-            Another published story available through Bribooks.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <small>
-            BOOK 03 · AMAZON
-          </small>
-
-          <h3>
-            Light Years Before Dinosaurs
-          </h3>
-
-          <p>
-            A science-fiction adventure published on Amazon.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact">
-
-      <div class="section-label">
-        Say hello
-      </div>
-
-      <h2>
-        The full site<br>
-        is coming soon.
-      </h2>
-
-      <p class="about-text">
-        Until then, you can reach me here:
-      </p>
-
-      <a
-        class="email"
-        href="mailto:hi.ritviksahay@gmail.com"
-      >
-        hi.ritviksahay@gmail.com
-      </a>
-
-      <a
-        class="email"
-        href="mailto:ritvik@bitbuzz.app"
-      >
-        ritvik@bitbuzz.app
-      </a>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-
-    © 2026 Ritvik Sahay · Built while the next version is loading.
-
-  </footer>
-
-
-  <script>
-
-    /* STAR FIELD */
-
-    const canvas = document.getElementById("stars");
-
-    const ctx = canvas.getContext("2d");
-
-    let stars = [];
-
-
-    function resizeCanvas() {
-
-      canvas.width = window.innerWidth;
-
-      canvas.height = window.innerHeight;
-
-      stars = [];
-
-      const amount = Math.min(
-        160,
-        Math.floor(window.innerWidth / 7)
-      );
-
-
-      for (let i = 0; i < amount; i++) {
-
-        stars.push({
-
-          x: Math.random() * canvas.width,
-
-          y: Math.random() * canvas.height,
-
-          radius: Math.random() * 1.4 + 0.2,
-
-          speed: Math.random() * 0.35 + 0.08
-
-        });
-
-      }
-
-    }
-
-
-    function animateStars() {
-
-      ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
-
-
-      ctx.fillStyle = "rgba(255,255,255,0.7)";
-
-
-      stars.forEach(star => {
-
-        star.y += star.speed;
-
-
-        if (star.y > canvas.height) {
-
-          star.y = 0;
-
-        }
-
-
-        ctx.beginPath();
-
-        ctx.arc(
-          star.x,
-          star.y,
-          star.radius,
-          0,
-          Math.PI * 2
-        );
-
-        ctx.fill();
-
-      });
-
-
-      requestAnimationFrame(animateStars);
-
-    }
-
-
-    window.addEventListener(
-      "resize",
-      resizeCanvas
-    );
-
-
-    resizeCanvas();
-
-    animateStars();
-
-
-    /* MOUSE MOVEMENT */
-
-    document.addEventListener(
-      "mousemove",
-      event => {
-
-        const x =
-          (event.clientX / window.innerWidth - 0.5) * 8;
-
-        const y =
-          (event.clientY / window.innerHeight - 0.5) * 8;
-
-
-        document.querySelector("h1").style.transform =
-          `translate(${x}px, ${y}px)`;
-
-      }
-    );
-
-  </script>
-
+    <!-- HEADER AND NAVIGATION -->
+    <center>
+        <header>
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a> |
+                <a href="#about-me">About Me</a> |
+                <a href="#my-books">Books</a> |
+                <a href="#my-interests">Interests</a> |
+                <a href="#quick-facts">Quick Facts</a> |
+                <a href="#my-projects">Projects</a> |
+                <a href="#my-education">Education</a> |
+                <a href="#my-certificates">Certificates</a> |
+                <a href="#my-gallery">Gallery</a> |
+                <a href="#my-contact">Contact Me</a>
+            </nav>
+        </header>
+    </center>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home">
+            <center>
+                <img
+                    src="https://i.ibb.co/VWz3DdSr/Whats-App-Image-2026-10-12-at-8-58-21-AM-1.jpg"
+                    alt="Ritvik Sahay"
+                    width="200"
+                >
+
+                <h1>Ritvik Sahay</h1>
+
+                <p>Student | Young Author | Space Enthusiast | ICT Captain</p>
+
+                <p>
+                    Hi, I'm Ritvik Sahay, a student, young author,
+                    and technology enthusiast who loves exploring
+                    space, building creative projects, and learning
+                    new things. I enjoy writing books, experimenting
+                    with coding, and discovering how technology can
+                    solve real-world problems. Through my work, I aim
+                    to turn ideas into meaningful creations and keep
+                    pushing my curiosity further.
+                </p>
+            </center>
+        </section>
+
+        <hr>
+
+        <!-- ABOUT ME -->
+        <section id="about-me">
+            <div class="glance-card">
+                <h3>About Me</h3>
+
+                <p>
+                    I'm Ritvik Sahay, a student, young author, space
+                    enthusiast, and ICT Captain. I'm someone who enjoys
+                    learning, exploring new ideas, and discovering how
+                    things work. I believe that curiosity is one of the
+                    best ways to grow, and I always look for opportunities
+                    to develop my knowledge, improve my skills, and turn
+                    my ideas into something meaningful.
+                </p>
+
+                <p>
+                    My hobbies are coding, reading, book writing, and
+                    studying. Coding allows me to explore technology,
+                    understand how websites and programs work, and bring
+                    my ideas to life. I enjoy experimenting with HTML,
+                    learning about web development, and discovering new
+                    ways to solve problems through technology. Reading
+                    helps me explore different worlds, learn new facts,
+                    expand my vocabulary, and discover ideas that inspire me.
+                </p>
+
+                <p>
+                    Book writing is another hobby I truly enjoy. I love
+                    creating stories, developing characters, imagining
+                    new worlds, and turning the ideas in my mind into
+                    written adventures. Writing allows me to express my
+                    creativity and share my imagination with readers.
+                    I am also interested in studying and learning new
+                    subjects because every topic offers something
+                    interesting to discover.
+                </p>
+
+                <p>
+                    As a space enthusiast, I am fascinated by the
+                    universe, planets, stars, and the possibilities of
+                    future space exploration. My interest in technology
+                    and science encourages me to think about the future
+                    and imagine what people might create in the years ahead.
+                </p>
+
+                <p>
+                    Through my personal projects, writing, and learning
+                    experiences, I hope to keep improving and exploring
+                    new possibilities. This website is a place where I
+                    can share my interests, books, projects, achievements,
+                    and creative work. My goal is to keep learning, stay
+                    curious, and transform my ideas into projects that
+                    reflect my imagination, effort, and passion for discovery.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- EDUCATION -->
+        <section id="my-education">
+            <h2>My Education</h2>
+
+            <div class="glance-card">
+                <img
+                    src="https://resources.edunexttechnologies.com/web-data/srgsnoida/img/footer-logo.png"
+                    width="40"
+                    alt="Shri Ram Global School logo"
+                >
+                <br>
+
+                <h3><b>Shri Ram Global School, Greater Noida West</b></h3>
+
+                <p><b>October 2022–Present | Grades 1–5 | CBSE</b></p>
+
+                <p>
+                    I have spent five years at this school, where I have
+                    served as the ICT Prefect and currently serve as the
+                    ICT Captain. I have also participated in various school
+                    activities, including the Annual Day and other events.
+                </p>
+
+                <a href="https://srgsnoida.com/" target="_blank" rel="noopener noreferrer">
+                    School Website↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+              
+                <img src="data:image/jpeg;base64,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" width="40" alt="Helvetia School">
+
+                <br>
+
+                <h3>Helvetia School, Guntur</h3>
+
+                <p>March 2019 – April 2022 | Pre-K to K2 | CBSE</p>
+
+                <p>
+                    I studied at Helvetia School in Guntur from Pre-K to K2,
+                    building my early learning foundations before moving
+                    on to the next stage of my education.
+                </p>
+
+                <a
+                    href="https://schools.org.in/guntur/28172600330/helvetia-school-g-t-road-guntur-near-tobaco-bord-guntur.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View School Details↗
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- HOBBIES AND INTERESTS -->
+        <section id="my-interests">
+            <h2>My Hobbies &amp; Interests</h2>
+
+            <p>
+                My hobbies are an important part of who I am.
+                They allow me to explore my creativity, develop new
+                skills, expand my knowledge, and discover new ideas.
+                I enjoy activities that challenge me to think, learn,
+                imagine, and create. My four main hobbies are coding,
+                reading, book writing, and studying.
+            </p>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjncUk4wzUGopFoCdsL0uzliMBBvVENxHKW3ieQqwhlA&s=10"
+                    width="60"
+                    alt="Coding"
+                >
+                <br>
+
+                <h3>Coding</h3>
+
+                <p>
+                    Coding is one of my favourite hobbies because it
+                    allows me to turn ideas into real digital projects.
+                    I enjoy learning how websites work, experimenting
+                    with HTML, and exploring the world of programming.
+                    I like building websites, understanding how
+                    different elements work together, and discovering
+                    how technology can be used to solve problems.
+                    Every new project gives me an opportunity to learn
+                    something different, improve my logical thinking,
+                    and develop my technical skills. I hope to continue
+                    exploring web development and other areas of
+                    technology as I grow.
+                </p>
+            </div>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYJ5XxXQaY7DpweecxQXPR-Y8UVGdeSkvxM2qJ6PGsQ&s=10"
+                    width="60"
+                    alt="Reading"
+                >
+                <br>
+
+                <h3>Reading</h3>
+
+                <p>
+                    Reading is a hobby that helps me discover new
+                    ideas, explore different worlds, and learn about
+                    subjects beyond my everyday experiences. I enjoy
+                    reading because books can introduce me to
+                    interesting characters, fascinating facts,
+                    imaginative adventures, and new ways of thinking.
+                    Reading also helps me improve my vocabulary,
+                    develop my language skills, and understand how
+                    writers communicate their ideas. I am especially
+                    interested in stories and subjects that encourage
+                    curiosity and imagination. Every book offers
+                    something new to discover.
+                </p>
+            </div>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv3r1VJ_4D22e0Odzn1Qw47QTGqzVH8Ct_k6KTBhQ4xw&s=10"
+                    width="60"
+                    alt="Book Writing"
+                >
+
+                <h3>Book Writing</h3>
+
+                <p>
+                    Book writing is one of the ways I express my
+                    imagination and creativity. I enjoy developing
+                    story ideas, creating characters, building
+                    fictional worlds, and planning exciting adventures.
+                    Writing allows me to transform thoughts and ideas
+                    into stories that readers can explore. I have
+                    written books such as The Galaxy Escape and
+                    The Rescue, which are available on Bribooks, as
+                    well as Light Years Before Dinosaurs: The Secret
+                    Beneath Delhi, available on Amazon.
+                </p>
+
+                <p>
+                    Working on books teaches me patience, planning,
+                    storytelling, and the importance of revising my
+                    work. I hope to keep writing new stories, exploring
+                    different ideas, and growing as a young author.
+                </p>
+            </div>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6KcLvGhwzgo3d_ualpt2XD7BF1nxynGdLHLR9ZETdg&s=10"
+                    width="60"
+                    alt="Studying"
+                >
+
+                <h3>Studying</h3>
+
+                <p>
+                    Studying helps me build my knowledge, understand
+                    new concepts, and explore how the world works.
+                    I enjoy learning about different subjects and
+                    discovering connections between what I learn in
+                    school and the world around me. For me, studying
+                    is not only about completing schoolwork or
+                    preparing for examinations. It is also an
+                    opportunity to ask questions, develop critical
+                    thinking, strengthen my understanding, and
+                    discover topics that interest me.
+                </p>
+
+                <p>
+                    I believe that learning something new every day
+                    can help me improve my skills and become a more
+                    knowledgeable person. I try to approach learning
+                    with curiosity and an open mind.
+                </p>
+            </div>
+
+            <p>
+                These four hobbies reflect my interests in learning,
+                creativity, technology, and storytelling. Whether
+                I am writing a new chapter, reading a book, working
+                on a coding project, or studying a new topic, I enjoy
+                the opportunity to discover something new and develop
+                my abilities.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- QUICK FACTS -->
+        <section id="quick-facts">
+            <h2>Quick Facts About Me</h2>
+
+            <p>
+                Here's a quick look at who I am, what I do,
+                and the things I enjoy.
+            </p>
+
+            <div class="facts-container">
+
+                <article class="fact-card">
+                    <h3>My Role</h3>
+                    <p>ICT Captain</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Passion</h3>
+                    <p>Coding and Technology</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Favourite Creative Activity</h3>
+                    <p>Writing Books</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Reading Interest</h3>
+                    <p>Stories and Knowledge</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Science Interest</h3>
+                    <p>Space and Astronomy</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Published Books</h3>
+                    <p>Three Books</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Current Learning Goal</h3>
+                    <p>Building Websites with HTML, CSS and JavaScript</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Favourite Hobbies</h3>
+                    <p>Coding, Reading, Book Writing and Studying</p>
+                </article>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- MY BOOKS -->
+        <section id="my-books">
+            <h2>My Books</h2>
+
+            <p>
+                Writing books allows me to bring my imagination
+                to life, create new worlds, and share stories with
+                readers. Here are three of my books.
+            </p>
+
+            <div class="glance-card">
+                <center>
+                    <img
+                        src="https://media.bribooks.com/public/AuthorCoverImages/user_cover_6776cdb0545df_b1_v892196.png?width=250&format=avif"
+                        width="200"
+                        alt="The Galaxy Escape book cover"
+                    >
+
+                    <h3>The Galaxy Escape</h3>
+
+                    <p>
+                        This was my first book. It is a science-fiction
+                        adventure that takes readers beyond Earth and
+                        into the wonders of space.
+                    </p>
+
+                    <a
+                        href="https://www.bribooks.com/review/the-galaxy-escape/?srsltid=AU7gw4UYtVsUut8M5HBqU5iDYoyyaRf1UZ5ZCw42-q6GL1tx-8rDDebW"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore on Bribooks ↗
+                    </a>
+                </center>
+            </div>
+
+            <hr>
+
+            <div class="glance-card">
+                <center>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIR5ObhJ5ktnXQY2s9gxQNjFcrAdt20U7mhASG4dCEkg&s"
+                        width="200"
+                        alt="The Rescue book cover"
+                    >
+
+                    <h3>The Rescue</h3>
+
+                    <p>
+                        An adventurous story about a rescue mission
+                        filled with challenges and excitement.
+                    </p>
+
+                    <p><strong>Publisher:</strong> Bribooks</p>
+
+                    <a
+                        href="https://www.bribooks.com/bookstore/the-rescue-by-ritvik-sahay/?srsltid=AU7gw4Wq3WWYBpigUGldPYuqSJ-QACxJBkB2tBCe2CJ5G0e_VkpcNjq4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore on Bribooks ↗
+                    </a>
+                </center>
+            </div>
+
+            <hr>
+
+            <div class="glance-card">
+                <center>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTobipRgU8VmyILEFYB1m5Nl8_eeWr-P_2j6B2fRjBUA&s"
+                        width="200"
+                        alt="Light Years Before Dinosaurs book cover"
+                    >
+                    <br>
+
+                    <h3>Light Years Before Dinosaurs: The Secret Beneath Delhi</h3>
+
+                    <p>
+                        Aarav thought he was heading into an ordinary
+                        school holiday. Instead, he discovers a hidden
+                        alien city buried beneath Delhi, meets a
+                        pizza-loving alien named Floof, and finds himself
+                        caught in a secret that could change Earth forever.
+                    </p>
+
+                    <a
+                        href="https://www.amazon.in/Light-Years-Before-Dinosaurs-Beneath-ebook/dp/B0H3R35HW8/ref=sr_1_1?crid=XT9D642Z69U1&dib=eyJ2IjoiMSJ9.wf8RoVPWPkKsazetsdp-1Klt7LzCuuX9G1u1edpcUIE.kD8A7cBwXWz4QvJbsQZxDvWCgani748CMPMfUcnZbvU&dib_tag=se&keywords=light+before+dinosaurs&qid=1791779124&sprefix=light+befores+dinosaur%2Caps%2C353&sr=8-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore on Amazon ↗
+                    </a>
+                </center>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- MY PROJECTS -->
+        <section id="my-projects">
+
+            <h2>My Projects</h2>
+
+            <p>
+                Explore the projects I’ve built, from interactive games and coding experiments to creative digital experiences. Each project reflects my curiosity about technology, problem-solving, and turning ideas into reality.
+            </p>
+
+            <div class="glance-card">
+                <a href="https://imgbb.com/">
+                    <img
+                        src="https://i.ibb.co/LdhY1LVk/bitbuzzz.jpg"
+                        alt="BitBuzz"
+                        width="60"
+                    >
+                </a>
+
+                <h3>BitBuzz</h3>
+
+                <p>
+                    BitBuzz is a student-run platform created by my
+                    brother and me. It covers space, technology,
+                    aviation, cybersecurity, and more.
+                </p>
+
+                <p>
+                    I have written 50+ articles and news pieces
+                    over the past two years, helping BitBuzz grow.
+                </p>
+
+                <a href="https://www.bitbuzz.app/" target="_blank">
+                    Visit BitBuzz →
+                </a>
+
+                <br><br>
+
+                <a href="https://hridhaan.me/" target="_blank">
+                    My Brother's Portfolio →
+                </a>
+            </div>
+
+            <hr>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNrv3_MIbgE1xSFSd8Q5_VOj45jX8n3x-39rrB2IUcA&s=10"
+                    width="60"
+                    alt="Writer Streak Dashboard"
+                >
+
+                <h3>Writer Streak Dashboard</h3>
+
+                <p>
+                    A personal writing tracker that helps me stay consistent, track my daily writing streaks, and build a regular writing habit.
+                </p>
+
+                <a
+                    href="https://writer-streak-dashboard.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit Website →
+                </a>
+            </div>
+
+            <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZ41NB34Ltgi4BDb5VJOO04diBfjYwe1znjRemQMQ9w&s=10"
+                    width="60"
+                    alt="Solar System Explorer"
+                >
+
+                <h3>Solar System Explorer</h3>
+
+                <p>
+                    Explore the eight planets, discover fascinating space facts, and journey through our Solar System with interactive planetary orbits.
+                </p>
+
+                <a
+                    href="https://solar-system-explorer-one.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit Website →
+                </a>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- MY ACHIEVEMENTS -->
+        <section id="my-certificates">
+
+            <h2>My Achievements</h2>
+
+            <div class="glance-card">
+                <h3>Writing &amp; Publishing</h3>
+                <p>My published books and writing achievements.</p>
+                <a href="" target="_blank">
+                    View Certificates↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+                <h3>Olympiads &amp; Academics</h3>
+                <p>My academic achievements and Olympiad rankings.</p>
+                <a href="" target="_blank">
+                    View Certificates↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+                <h3>School Leadership</h3>
+                <p>My school leadership roles and responsibilities.</p>
+                <a href="" target="_blank">
+                    View Certificates↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+                <h3>Competitions &amp; Awards</h3>
+                <p>My school and inter-school competition achievements.</p>
+                <a href="" target="_blank">
+                    View Certificates↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+                <h3>Technology &amp; Coding</h3>
+                <p>My technology, coding, and innovation achievements.</p>
+                <a href="" target="_blank">
+                    View Certificates↗
+                </a>
+            </div>
+
+        </section>
+
+    </main>
 </body>
-              </html>
+
+
+
+</html>
