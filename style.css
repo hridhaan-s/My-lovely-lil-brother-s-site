@@ -1,83 +1,286 @@
+
+/* =====================================
+   COLOURFUL PORTFOLIO
+   White background + colourful hover
+===================================== */
+
+/* Keep the original white background */
+
+html,
+body {
+    background: #FFFFFF !important;
+    color: #222222;
+}
+
+/* Colourful headings */
+
+h1 {
+    color: #6546D7;
+}
+
+h2 {
+    color: #2878D0;
+}
+
+h3 {
+    color: #E76B45;
+}
+
+/* Colourful navigation hover */
+
+nav a {
+    color: #444444;
+    border-radius: 8px;
+    padding: 6px 9px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    background: #E9E1FF;
+    color: #6546D7;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Keep the website sections white */
+
+main > section {
+    background: #FFFFFF;
+    border: 1px solid #E8E8EE;
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Whole sections gently float */
+
+@media (hover: hover) {
+    main > section:hover {
+        transform: translateY(-4px);
+        border-color: #B9A7FF;
+        box-shadow: 0 10px 25px rgba(101, 70, 215, 0.10);
+    }
+}
+
+/* Colourful glance cards */
+
+.glance-card {
+    background: #FFFFFF;
+    border: 2px solid #FFD166;
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Give different cards different accent colours */
+
+.glance-card:nth-of-type(4n + 1) {
+    border-color: #FF8585;
+}
+
+.glance-card:nth-of-type(4n + 2) {
+    border-color: #72C8B5;
+}
+
+.glance-card:nth-of-type(4n + 3) {
+    border-color: #9B8AFB;
+}
+
+.glance-card:nth-of-type(4n + 4) {
+    border-color: #FFBF69;
+}
+
+/* Cards float when hovered */
+
+@media (hover: hover) {
+    .glance-card:hover {
+        transform: translateY(-6px);
+        background: #FFFEFA;
+        box-shadow: 0 12px 25px rgba(40, 40, 70, 0.12);
+    }
+}
+
+/* Colourful Quick Facts cards */
+
 .fact-card {
-  background: #00000000;
-  padding: 50px;
-  border-radius: 20px;
-  text-align: center;
-  border: 1px solid #d3b522;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+    background: #F5F0FF;
+    border: 1px solid #C9B9FF;
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-
-
-.fact-card h2 {
-  font-size: 28px;
-  color: #ffbf00;
-  margin-bottom: 8px;
+.fact-card:nth-child(4n + 2) {
+    background: #EAF8F4;
+    border-color: #91D8C7;
 }
 
-.fact-card p {
-  font-size: 15px;
-  color: #000000;
-  margin: 0;
+.fact-card:nth-child(4n + 3) {
+    background: #FFF1E8;
+    border-color: #FFC49D;
 }
 
-a:hover {
-  color: darkorange;
-  text-decoration: underline;
+.fact-card:nth-child(4n + 4) {
+    background: #FFF9DB;
+    border-color: #F2D66D;
 }
 
+@media (hover: hover) {
+    .fact-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 22px rgba(40, 40, 70, 0.12);
+    }
+}
+
+/* Colourful links */
 
 a {
-  color: #d99b00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+    color: #6546D7;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #222222;
-  text-decoration: underline;
-}
-.glance-card {
-  display: block;
-  background: white;
-  color: black;
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid orange;
-  border-radius: 16px;
-
-  
+    color: #E76B45;
 }
 
+/* Colourful buttons */
 
-
-body {
-    background-image: url("https://img.magnific.com/free-vector/halftone-background-abstract-black-white-dots-shape_84443-9842.jpg?semt=ais_hybrid&w=740&q=80");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: black;
+button,
+.astro-subscribe-button {
+    background: linear-gradient(135deg, #FFE66D, #FFB86B);
+    color: #222222;
+    border: 1px solid #F0AD35;
+    border-radius: 9px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
 }
 
-.live-clock {
-    text-align: center;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 12px;
+@media (hover: hover) {
+    button:hover,
+    .astro-subscribe-button:hover {
+        transform: translateY(-4px);
+        filter: saturate(1.15);
+        box-shadow: 0 7px 18px rgba(231, 107, 69, 0.20);
+    }
 }
 
-.live-clock p {
-    margin: 5px;
-    font-size: 14px;
+/* Keep the astrophotography warning red */
+
+.gallery-note {
+    background: #FFF5F5;
+    color: #333333;
+    border: 2px solid #EF4444;
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-#clock {
-    font-size: 32px;
-    margin: 10px 0;
-    font-weight: bold;
+.gallery-note h2,
+.gallery-note h3 {
+    color: #D92D3A;
 }
 
+@media (hover: hover) {
+    .gallery-note:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 22px rgba(239, 68, 68, 0.12);
+    }
+}
+
+/* White footer */
+
+footer {
+    background: #FFFFFF;
+    color: #333333;
+    border-top: 2px solid #E5DFFF;
+}
+
+footer p {
+    color: #555555;
+}
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* FIX: RESTORE COMFORTABLE SPACING */
+
+/* Add room inside every main section */
+main > section {
+    padding: 30px !important;
+    margin: 28px auto !important;
+}
+
+/* Stop card content touching the borders */
+.glance-card,
+.fact-card,
+.gallery-note {
+    padding: 24px !important;
+    margin: 22px auto !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Give headings some breathing room */
+.glance-card h3,
+.fact-card h3,
+.gallery-note h3 {
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+/* Improve paragraph spacing */
+.glance-card p,
+.fact-card p,
+.gallery-note p {
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+/* Keep images away from nearby text */
+.glance-card img,
+.gallery-note img {
+    margin: 8px;
+}
+
+/* Comfortable spacing on smaller screens */
+@media (max-width: 600px) {
+    main > section {
+        padding: 20px 16px !important;
+        margin: 18px auto !important;
+    }
+
+    .glance-card,
+    .fact-card,
+    .gallery-note {
+        padding: 18px !important;
+        margin: 18px auto !important;
+    }
+}
