@@ -1,0 +1,205 @@
+
+
+/* GENERAL PAGE */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #101322;
+    color: #f3f4f6;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background-color: #171b30;
+    padding: 25px 8%;
+    border-bottom: 1px solid #343951;
+}
+
+header h1 {
+    color: #a9b9ff;
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    color: #c8cde0;
+    margin-bottom: 0;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 22px;
+}
+
+section {
+    margin: 35px 0;
+}
+
+h2 {
+    color: #a9b9ff;
+    font-size: 27px;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 21px;
+}
+
+p {
+    overflow-wrap: anywhere;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #343951;
+    margin: 25px 0;
+}
+
+/* WELCOME SECTION */
+
+#welcome {
+    background: linear-gradient(135deg, #1b2037, #252747);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #454d75;
+}
+
+#welcome h2 {
+    margin-top: 0;
+}
+
+/* BLOG POSTS */
+
+#blog-posts article {
+    background-color: #1b2037;
+    border: 1px solid #343b5a;
+    border-left: 5px solid #a9b9ff;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 22px 0;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+#blog-posts article:hover {
+    transform: translateY(-4px);
+    border-color: #a9b9ff;
+}
+
+#blog-posts article h3 {
+    margin-top: 0;
+}
+
+#blog-posts article p {
+    color: #d0d4e5;
+}
+
+/* SUBSCRIPTION SECTION */
+
+#subscribe {
+    background-color: #1b2037;
+    border: 1px solid #454d75;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#subscribe h2 {
+    margin-top: 0;
+}
+
+/* LINKS AND BUTTONS */
+
+a {
+    color: #b8c5ff;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+#subscribe a {
+    display: inline-block;
+    background-color: #a9b9ff;
+    color: #101322;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 9px;
+    margin-top: 10px;
+    transition: background-color 0.25s, transform 0.25s;
+}
+
+#subscribe a:hover {
+    background-color: #d0d8ff;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #171b30;
+    color: #b8bfd6;
+    text-align: center;
+    padding: 25px 20px 80px;
+    border-top: 1px solid #343951;
+}
+
+footer a {
+    color: #a9b9ff;
+}
+
+/* BACK TO HOME LINK */
+
+footer a[href="/"] {
+    display: inline-block;
+    background-color: #a9b9ff;
+    color: #101322;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 9px;
+}
+
+footer a[href="/"]:hover {
+    background-color: #d0d8ff;
+}
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 600px) {
+    header {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        padding: 18px;
+    }
+
+    #welcome,
+    #subscribe {
+        padding: 20px;
+    }
+
+    #blog-posts article {
+        padding: 19px;
+    }
+}
