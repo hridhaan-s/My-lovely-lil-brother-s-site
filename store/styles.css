@@ -1,1 +1,151 @@
 
+/* Whole website */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background-color: #080808;
+    color: #F5D76E;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    padding: 20px;
+    text-align: left;
+    background-color: #101010;
+    border-bottom: 1px solid #B89635;
+}
+
+/* Navigation links */
+nav a {
+    color: #E8C75A;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* When someone points at a link */
+nav a:hover {
+    color: white;
+}
+
+/* Welcome section */
+.home {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #080808;
+}
+
+/* Welcome heading */
+.home h2 {
+    color: #FFD966;
+    font-size: 36px;
+}
+
+/* Welcome paragraph */
+.home p {
+    color: #E6D7A8;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Books section */
+.books {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Book cover image */
+.books img {
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    transform: rotate(-5deg);
+}
+
+/* Book title */
+.books h2 {
+    color: #FFD966;
+    margin-top: 25px;
+}
+
+.glance-card {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 20px;
+    border: 05px solid #B89635;
+    border-color: #F5D76E;
+    border-radius: 10px;
+}
+a:hover {
+    color: #ffbf00;
+}
+
+
+.site-footer {
+    background: #080808;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+    border-top: 2px solid #d4af37;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-footer img {
+    display: block;
+    margin: 0 auto 12px;
+    max-width: 100px;
+    height: auto;
+}
+
+.site-footer h2 {
+    color: #d4af37;
+    margin-bottom: 8px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 22px 0;
+}
+
+.site-footer a {
+    color: #e6c65b;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-footer hr {
+    border: none;
+    border-top: 1px solid #5c4b18;
+    margin: 22px 0;
+}
+
+.site-footer .copyright {
+    font-size: 14px;
+}
+
+.site-footer .footer-note {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+
+
