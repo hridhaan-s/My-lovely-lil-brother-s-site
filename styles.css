@@ -284,3 +284,248 @@ main > section {
         margin: 18px auto !important;
     }
 }
+
+
+/* THE RITVIK COLLECTION */
+
+/* Main store section */
+#ritvik-collection {
+    background-color: #080808;
+    color: #F5D76E;
+    font-family: Georgia, serif;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Store header */
+#ritvik-collection .collection-header {
+    background-color: #101010;
+    padding: 25px 15px;
+    border-bottom: 1px solid #B89635;
+}
+
+/* Store logo */
+#ritvik-collection .collection-logo {
+    width: 150px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Store tagline */
+#ritvik-collection .collection-tagline {
+    color: #E6D7A8;
+    font-size: 16px;
+}
+
+/* Store navigation */
+#ritvik-collection .collection-nav {
+    padding: 15px 5px;
+}
+
+/* Navigation links */
+#ritvik-collection .collection-nav a {
+    display: inline-block;
+    color: #E8C75A;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px 12px;
+}
+
+/* Navigation hover */
+#ritvik-collection .collection-nav a:hover {
+    color: white;
+}
+
+/* Welcome section */
+#ritvik-collection .collection-home {
+    padding: 60px 20px;
+}
+
+/* Welcome heading */
+#ritvik-collection .collection-home h2 {
+    color: #FFD966;
+    font-size: 36px;
+}
+
+/* Welcome paragraph */
+#ritvik-collection .collection-home p {
+    color: #E6D7A8;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Books sections */
+#ritvik-collection .collection-books {
+    padding: 35px 10px;
+}
+
+/* Section headings */
+#ritvik-collection .collection-books > h2 {
+    color: #FFD966;
+    margin-bottom: 30px;
+}
+
+/* Store cards */
+#ritvik-collection .collection-card {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 25px;
+    margin: 20px auto;
+    border: 5px solid #F5D76E;
+    border-radius: 10px;
+    max-width: 850px;
+    box-sizing: border-box;
+}
+
+/* Book covers */
+#ritvik-collection .collection-book-cover {
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    transform: rotate(-5deg);
+    margin: 15px auto 25px;
+}
+
+/* Book titles */
+#ritvik-collection .collection-card h3 {
+    color: #8B6914;
+    margin-top: 20px;
+}
+
+/* Card paragraphs */
+#ritvik-collection .collection-card p {
+    line-height: 1.8;
+}
+
+/* Prices */
+#ritvik-collection .collection-price {
+    background-color: #FFF8E5;
+    border: 1px solid #E8C75A;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+/* Request buttons */
+#ritvik-collection .collection-button {
+    display: inline-block;
+    background-color: #101010;
+    color: #FFD966;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 1px solid #B89635;
+    border-radius: 6px;
+    margin: 15px;
+}
+
+/* Request button hover */
+#ritvik-collection .collection-button:hover {
+    background-color: #B89635;
+    color: #FFFFFF;
+}
+
+/* Ordering process */
+#ritvik-collection .collection-process {
+    padding: 20px 10px;
+}
+
+/* Order form */
+#ritvik-collection .collection-order {
+    padding: 40px 15px;
+}
+
+/* Order heading */
+#ritvik-collection .collection-order h2 {
+    color: #FFD966;
+}
+
+/* Order description */
+#ritvik-collection .collection-order p {
+    color: #E6D7A8;
+    line-height: 1.8;
+}
+
+/* Store footer */
+#ritvik-collection .collection-footer {
+    background-color: #101010;
+    padding: 35px 15px;
+    margin-top: 30px;
+    border-top: 1px solid #B89635;
+}
+
+/* Footer logo */
+#ritvik-collection .collection-footer-logo {
+    width: 80px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Footer heading */
+#ritvik-collection .collection-footer h2 {
+    color: #FFD966;
+}
+
+/* Footer links */
+#ritvik-collection .collection-footer-links {
+    margin: 20px 0;
+}
+
+/* Footer navigation */
+#ritvik-collection .collection-footer-links a {
+    display: inline-block;
+    color: #E8C75A;
+    text-decoration: none;
+    margin: 8px 12px;
+}
+
+/* Footer link hover */
+#ritvik-collection .collection-footer a:hover {
+    color: white;
+}
+
+/* Divider */
+#ritvik-collection .collection-divider {
+    border: none;
+    border-top: 1px solid #B89635;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* Copyright */
+#ritvik-collection .collection-copyright {
+    color: #E8C75A;
+}
+
+/* Footer note */
+#ritvik-collection .collection-footer-note {
+    color: #C9B879;
+    font-size: 14px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+
+    #ritvik-collection .collection-home h2 {
+        font-size: 28px;
+    }
+
+    #ritvik-collection .collection-card {
+        padding: 18px;
+        margin: 15px auto;
+    }
+
+    #ritvik-collection .collection-nav a {
+        margin: 8px;
+    }
+
+    #ritvik-collection .collection-book-cover {
+        width: 180px;
+    }
+
+    #ritvik-collection .collection-order iframe {
+        width: 100%;
+    }
+
+}
+
