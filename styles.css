@@ -1,572 +1,85 @@
 
-/* =====================================
-   COLOURFUL PORTFOLIO
-   White background + colourful hover
-===================================== */
-
-/* Keep the original white background */
-
-html,
+/* Whole website */
 body {
-    background: #FFFFFF !important;
-    color: #222222;
-}
-
-/* Colourful headings */
-
-h1 {
-    color: #6546D7;
-}
-
-h2 {
-    color: #2878D0;
-}
-
-h3 {
-    color: #E76B45;
-}
-
-/* Colourful navigation hover */
-
-nav a {
-    color: #444444;
-    border-radius: 8px;
-    padding: 6px 9px;
-    transition: all 0.25s ease;
-}
-
-nav a:hover {
-    background: #E9E1FF;
-    color: #6546D7;
-    transform: translateY(-3px);
-    text-decoration: none;
-}
-
-/* Keep the website sections white */
-
-main > section {
-    background: #FFFFFF;
-    border: 1px solid #E8E8EE;
-    border-radius: 14px;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
-
-/* Whole sections gently float */
-
-@media (hover: hover) {
-    main > section:hover {
-        transform: translateY(-4px);
-        border-color: #B9A7FF;
-        box-shadow: 0 10px 25px rgba(101, 70, 215, 0.10);
-    }
-}
-
-/* Colourful glance cards */
-
-.glance-card {
-    background: #FFFFFF;
-    border: 2px solid #FFD166;
-    border-radius: 14px;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
-}
-
-/* Give different cards different accent colours */
-
-.glance-card:nth-of-type(4n + 1) {
-    border-color: #FF8585;
-}
-
-.glance-card:nth-of-type(4n + 2) {
-    border-color: #72C8B5;
-}
-
-.glance-card:nth-of-type(4n + 3) {
-    border-color: #9B8AFB;
-}
-
-.glance-card:nth-of-type(4n + 4) {
-    border-color: #FFBF69;
-}
-
-/* Cards float when hovered */
-
-@media (hover: hover) {
-    .glance-card:hover {
-        transform: translateY(-6px);
-        background: #FFFEFA;
-        box-shadow: 0 12px 25px rgba(40, 40, 70, 0.12);
-    }
-}
-
-/* Colourful Quick Facts cards */
-
-.fact-card {
-    background: #F5F0FF;
-    border: 1px solid #C9B9FF;
-    border-radius: 14px;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.fact-card:nth-child(4n + 2) {
-    background: #EAF8F4;
-    border-color: #91D8C7;
-}
-
-.fact-card:nth-child(4n + 3) {
-    background: #FFF1E8;
-    border-color: #FFC49D;
-}
-
-.fact-card:nth-child(4n + 4) {
-    background: #FFF9DB;
-    border-color: #F2D66D;
-}
-
-@media (hover: hover) {
-    .fact-card:hover {
-        transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 10px 22px rgba(40, 40, 70, 0.12);
-    }
-}
-
-/* Colourful links */
-
-a {
-    color: #6546D7;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #E76B45;
-}
-
-/* Colourful buttons */
-
-button,
-.astro-subscribe-button {
-    background: linear-gradient(135deg, #FFE66D, #FFB86B);
-    color: #222222;
-    border: 1px solid #F0AD35;
-    border-radius: 9px;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        filter 0.25s ease;
-}
-
-@media (hover: hover) {
-    button:hover,
-    .astro-subscribe-button:hover {
-        transform: translateY(-4px);
-        filter: saturate(1.15);
-        box-shadow: 0 7px 18px rgba(231, 107, 69, 0.20);
-    }
-}
-
-/* Keep the astrophotography warning red */
-
-.gallery-note {
-    background: #FFF5F5;
-    color: #333333;
-    border: 2px solid #EF4444;
-    border-radius: 14px;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.gallery-note h2,
-.gallery-note h3 {
-    color: #D92D3A;
-}
-
-@media (hover: hover) {
-    .gallery-note:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 22px rgba(239, 68, 68, 0.12);
-    }
-}
-
-/* White footer */
-
-footer {
-    background: #FFFFFF;
-    color: #333333;
-    border-top: 2px solid #E5DFFF;
-}
-
-footer p {
-    color: #555555;
-}
-
-/* Smooth scrolling */
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Respect reduced-motion preferences */
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition-duration: 0.01ms !important;
-    }
-}
-
-
-/* FIX: RESTORE COMFORTABLE SPACING */
-
-/* Add room inside every main section */
-main > section {
-    padding: 30px !important;
-    margin: 28px auto !important;
-}
-
-/* Stop card content touching the borders */
-.glance-card,
-.fact-card,
-.gallery-note {
-    padding: 24px !important;
-    margin: 22px auto !important;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Give headings some breathing room */
-.glance-card h3,
-.fact-card h3,
-.gallery-note h3 {
-    margin-top: 8px;
-    margin-bottom: 14px;
-}
-
-/* Improve paragraph spacing */
-.glance-card p,
-.fact-card p,
-.gallery-note p {
-    margin-top: 10px;
-    margin-bottom: 14px;
-    line-height: 1.8;
-}
-
-/* Keep images away from nearby text */
-.glance-card img,
-.gallery-note img {
-    margin: 8px;
-}
-
-/* Comfortable spacing on smaller screens */
-@media (max-width: 600px) {
-    main > section {
-        padding: 20px 16px !important;
-        margin: 18px auto !important;
-    }
-
-    .glance-card,
-    .fact-card,
-    .gallery-note {
-        padding: 18px !important;
-        margin: 18px auto !important;
-    }
-}
-
-
-/* THE RITVIK COLLECTION */
-
-/* Main store section */
-#ritvik-collection {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
     background-color: #080808;
     color: #F5D76E;
-    font-family: Georgia, serif;
     text-align: center;
-    padding: 30px 15px;
 }
 
-/* Store header */
-#ritvik-collection .collection-header {
+/* Navigation bar */
+nav {
+    padding: 20px;
+    text-align: left;
     background-color: #101010;
-    padding: 25px 15px;
     border-bottom: 1px solid #B89635;
 }
 
-/* Store logo */
-#ritvik-collection .collection-logo {
-    width: 150px;
-    max-width: 80%;
-    height: auto;
-}
-
-/* Store tagline */
-#ritvik-collection .collection-tagline {
-    color: #E6D7A8;
-    font-size: 16px;
-}
-
-/* Store navigation */
-#ritvik-collection .collection-nav {
-    padding: 15px 5px;
-}
-
 /* Navigation links */
-#ritvik-collection .collection-nav a {
-    display: inline-block;
+nav a {
     color: #E8C75A;
     text-decoration: none;
     font-weight: bold;
-    margin: 8px 12px;
+    margin-right: 20px;
 }
 
-/* Navigation hover */
-#ritvik-collection .collection-nav a:hover {
+/* When someone points at a link */
+nav a:hover {
     color: white;
 }
 
 /* Welcome section */
-#ritvik-collection .collection-home {
-    padding: 60px 20px;
+.home {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #080808;
 }
 
 /* Welcome heading */
-#ritvik-collection .collection-home h2 {
+.home h2 {
     color: #FFD966;
     font-size: 36px;
 }
 
 /* Welcome paragraph */
-#ritvik-collection .collection-home p {
+.home p {
     color: #E6D7A8;
     font-size: 18px;
     line-height: 1.8;
 }
 
-/* Books sections */
-#ritvik-collection .collection-books {
-    padding: 35px 10px;
+/* Books section */
+.books {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-/* Section headings */
-#ritvik-collection .collection-books > h2 {
-    color: #FFD966;
-    margin-bottom: 30px;
-}
-
-/* Store cards */
-#ritvik-collection .collection-card {
-    background-color: #FFFFFF;
-    color: #000000;
-    padding: 25px;
-    margin: 20px auto;
-    border: 5px solid #F5D76E;
-    border-radius: 10px;
-    max-width: 850px;
-    box-sizing: border-box;
-}
-
-/* Book covers */
-#ritvik-collection .collection-book-cover {
+/* Book cover image */
+.books img {
     width: 220px;
     max-width: 90%;
     height: auto;
     transform: rotate(-5deg);
-    margin: 15px auto 25px;
 }
 
-/* Book titles */
-#ritvik-collection .collection-card h3 {
-    color: #8B6914;
-    margin-top: 20px;
-}
-
-/* Card paragraphs */
-#ritvik-collection .collection-card p {
-    line-height: 1.8;
-}
-
-/* Prices */
-#ritvik-collection .collection-price {
-    background-color: #FFF8E5;
-    border: 1px solid #E8C75A;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 25px 0;
-}
-
-/* Request buttons */
-#ritvik-collection .collection-button {
-    display: inline-block;
-    background-color: #101010;
+/* Book title */
+.books h2 {
     color: #FFD966;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 12px 25px;
-    border: 1px solid #B89635;
-    border-radius: 6px;
-    margin: 15px;
+    margin-top: 25px;
 }
 
-/* Request button hover */
-#ritvik-collection .collection-button:hover {
-    background-color: #B89635;
-    color: #FFFFFF;
+.glance-card {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 20px;
+    border: 05px solid #B89635;
+    border-color: #F5D76E;
+    border-radius: 10px;
+}
+a:hover {
+    color: #ffbf00;
 }
 
-/* Ordering process */
-#ritvik-collection .collection-process {
-    padding: 20px 10px;
-}
-
-/* Order form */
-#ritvik-collection .collection-order {
-    padding: 40px 15px;
-}
-
-/* Order heading */
-#ritvik-collection .collection-order h2 {
-    color: #FFD966;
-}
-
-/* Order description */
-#ritvik-collection .collection-order p {
-    color: #E6D7A8;
-    line-height: 1.8;
-}
-
-/* Store footer */
-#ritvik-collection .collection-footer {
-    background-color: #101010;
-    padding: 35px 15px;
-    margin-top: 30px;
-    border-top: 1px solid #B89635;
-}
-
-/* Footer logo */
-#ritvik-collection .collection-footer-logo {
-    width: 80px;
-    max-width: 80%;
-    height: auto;
-}
-
-/* Footer heading */
-#ritvik-collection .collection-footer h2 {
-    color: #FFD966;
-}
-
-/* Footer links */
-#ritvik-collection .collection-footer-links {
-    margin: 20px 0;
-}
-
-/* Footer navigation */
-#ritvik-collection .collection-footer-links a {
-    display: inline-block;
-    color: #E8C75A;
-    text-decoration: none;
-    margin: 8px 12px;
-}
-
-/* Footer link hover */
-#ritvik-collection .collection-footer a:hover {
-    color: white;
-}
-
-/* Divider */
-#ritvik-collection .collection-divider {
-    border: none;
-    border-top: 1px solid #B89635;
-    margin: 30px auto;
-    max-width: 900px;
-}
-
-/* Copyright */
-#ritvik-collection .collection-copyright {
-    color: #E8C75A;
-}
-
-/* Footer note */
-#ritvik-collection .collection-footer-note {
-    color: #C9B879;
-    font-size: 14px;
-}
-
-/* Mobile layout */
-@media (max-width: 600px) {
-
-    #ritvik-collection .collection-home h2 {
-        font-size: 28px;
-    }
-
-    #ritvik-collection .collection-card {
-        padding: 18px;
-        margin: 15px auto;
-    }
-
-    #ritvik-collection .collection-nav a {
-        margin: 8px;
-    }
-
-    #ritvik-collection .collection-book-cover {
-        width: 180px;
-    }
-
-    #ritvik-collection .collection-order iframe {
-        width: 100%;
-    }
-
-}
-
-
-#floatingNav {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
-    background-color: #1b2037;
-    color: white;
-    border: 2px solid blueviolet;
-    border-radius: 12px;
-    padding: 12px;
-}
-
-#floatingNav summary {
-    background-color: blueviolet;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    list-style: none;
-}
-
-#floatingNav summary::-webkit-details-marker {
-    display: none;
-}
-
-#floatingNav nav {
-    padding-top: 10px;
-}
-
-#floatingNav nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-#floatingNav nav a:hover {
-    background-color: blueviolet;
-    border-radius: 6px;
-}
