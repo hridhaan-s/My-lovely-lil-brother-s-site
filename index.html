@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,186 +6,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ritvik Sahay">
     <meta name="description" content="Explore Ritvik Sahay's personal portfolio, books, coding projects, achievements, education, and interest in space.">
-
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        #floatingNav {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            z-index: 1000;
-            width: max-content;
-            max-width: min(260px, calc(100vw - 30px));
-            color: #fff;
-            background: #171717;
-            border: 2px solid #f2c400;
-            border-radius: 12px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
-            font-family: Arial, sans-serif;
-        }
-
-        #floatingNav summary {
-            list-style: none;
-            cursor: pointer;
-            padding: 12px 16px;
-            background: #f2c400;
-            color: #111;
-            border-radius: 9px;
-            font-weight: bold;
-            user-select: none;
-        }
-
-        #floatingNav summary::-webkit-details-marker {
-            display: none;
-        }
-
-        #floatingNav nav {
-            display: flex;
-            flex-direction: column;
-            max-height: min(70vh, 520px);
-            overflow-y: auto;
-            padding: 7px;
-        }
-
-        #floatingNav nav a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 9px 11px;
-            border-radius: 7px;
-        }
-
-        #floatingNav nav a:hover,
-        #floatingNav nav a:focus-visible {
-            background: #333;
-            outline: 2px solid #f2c400;
-            outline-offset: -2px;
-        }
-
-        main section,
-        #ritvik-collection {
-            scroll-margin-top: 85px;
-        }
-
-        @media (max-width: 600px) {
-            #floatingNav {
-                top: 10px;
-                right: 10px;
-            }
-        }
-    </style>
-
-    <link
-        rel="icon"
-        type="image/png"
-        href="https://i.ibb.co/ksQZ29dM/Golden-Astronaut-Emblem-in-Space-removebg-preview.png"
-    >
-
-    <title>Ritvik Sahay</title>
+    <title>Ritvik Sahay | Personal Portfolio</title>
 </head>
 
 <body>
 
-<!-- FLOATING NAVIGATION: works without JavaScript -->
-<details id="floatingNav">
-    <summary>☰ Navigation</summary>
+    <!-- HEADER AND NAVIGATION -->
+    <header>
+        <center>
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a> |
+                <a href="#about-me">About Me</a> |
+                <a href="#my-books">Books</a> |
+                <a href="#my-interests">Interests</a> |
+                <a href="#quick-facts">Quick Facts</a> |
+                <a href="#my-projects">Projects</a> |
+                <a href="#my-education">Education</a> |
+                <a href="#my-certificates">Certificates</a> |
+                <a href="#astrography">Astrography</a> |
+                <a href="#my-blog">Blog</a> |
+                <a href="#my-contact">Contact Me</a>
+            </nav>
+        </center>
+    </header>
 
-    <nav aria-label="Floating navigation">
-        <a href="#home">Home</a>
-        <a href="#about-me">About Me</a>
-        <a href="#ritvik-collection">My Store</a>
-        <a href="#my-books">Books</a>
-        <a href="#my-interests">Interests</a>
-        <a href="#quick-facts">Quick Facts</a>
-        <a href="#my-projects">Projects</a>
-        <a href="#my-education">Education</a>
-        <a href="#my-certificates">Certificates</a>
-        <a href="#astrography">Astrophotography</a>
-        <a href="#my-contact">Contact Me</a>
-    </nav>
-</details>
+    <main>
 
-<!-- HEADER AND NAVIGATION -->
-<header>
-    <center>
-        <nav aria-label="Main navigation">
-            <a href="#home">Home</a> |
-            <a href="#about-me">About Me</a> |
-            <a href="#ritvik-collection">My Store</a> |
-            <a href="#my-books">Books</a> |
-            <a href="#my-interests">Interests</a> |
-            <a href="#quick-facts">Quick Facts</a> |
-            <a href="#my-projects">Projects</a> |
-            <a href="#my-education">Education</a> |
-            <a href="#my-certificates">Certificates</a> |
-            <a href="#astrography">Astrophotography</a> |
-            <a href="#my-contact">Contact Me</a>
-        </nav>
-    </center>
-</header>
+        <!-- HOME -->
+        <section id="home">
+            <center>
+                <img
+                    src="https://i.ibb.co/VWz3DdSr/Whats-App-Image-2026-10-12-at-8-58-21-AM-1.jpg"
+                    alt="Ritvik Sahay"
+                    width="200"
+                >
 
-<main>
+                <h1>Ritvik Sahay</h1>
 
+                <p>Student | Young Author | Space Enthusiast | ICT Captain</p>
+
+                <p>
+                    Hi, I'm Ritvik Sahay, a student, young author, and
+                    technology enthusiast from Greater Noida, India.
+                    I love exploring space, building creative projects,
+                    and learning new things. I enjoy writing books,
+                    experimenting with coding, and discovering how
+                    technology can solve real-world problems. Through
+                    my work, I aim to turn ideas into meaningful
+                    creations and keep pushing my curiosity further.
+                </p>
+
+                <p><strong>Location:</strong> Greater Noida, India</p>
+                
+            </center>
+        </section>
+
+<div class="glance-card">
+    <section id="my-blog">
+        <h3>Visit My Blog!</h3>
+        <p>
+            I have my own blog! Check it out for my
+            latest posts and updates:
+            <a href="https://www.ritvik.tech/blog/">
+                Visit Ritvik's Blog
+            </a>
+        </p>
+    </section>
+</div>
+
+
+
+        <hr>
+
+        <!-- ABOUT ME -->
+        <section id="about-me">
+            <div class="glance-card">
+                <h2>About Me</h2>
+
+                <p>
+                    I'm Ritvik Sahay, a student, young author, space
+                    enthusiast, and ICT Captain. I'm someone who enjoys
+                    learning, exploring new ideas, and discovering how
+                    things work. I believe that curiosity is one of the
+                    best ways to grow, and I always look for opportunities
+                    to develop my knowledge, improve my skills, and turn
+                    my ideas into something meaningful.
+                </p>
+
+                <p>
+                    My hobbies are coding, reading, book writing, and
+                    studying. Coding allows me to explore technology,
+                    understand how websites and programs work, and bring
+                    my ideas to life. I enjoy experimenting with HTML,
+                    learning about web development, and discovering new
+                    ways to solve problems through technology. Reading
+                    helps me explore different worlds, learn new facts,
+                    expand my vocabulary, and discover ideas that inspire me.
+                </p>
+
+                <p>
+                    Book writing is another hobby I truly enjoy. I love
+                    creating stories, developing characters, imagining
+                    new worlds, and turning the ideas in my mind into
+                    written adventures. Writing allows me to express my
+                    creativity and share my imagination with readers.
+                    I am also interested in studying and learning new
+                    subjects because every topic offers something
+                    interesting to discover.
+                </p>
+
+                <p>
+                    As a space enthusiast, I am fascinated by the
+                    universe, planets, stars, and the possibilities of
+                    future space exploration. My interest in technology
+                    and science encourages me to think about the future
+                    and imagine what people might create in the years ahead.
+                </p>
+
+                <p>
+                    Through my personal projects, writing, and learning
+                    experiences, I hope to keep improving and exploring
+                    new possibilities. This website is a place where I
+                    can share my interests, books, projects, achievements,
+                    and creative work. My goal is to keep learning, stay
+                    curious, and transform my ideas into projects that
+                    reflect my imagination, effort, and passion for discovery.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- EDUCATION -->
+        <section id="my-education">
+            <h2>My Education</h2>
+
+            <div class="glance-card">
+                <img
+                    src="https://resources.edunexttechnologies.com/web-data/srgsnoida/img/footer-logo.png"
+                    width="40"
+                    alt="Shri Ram Global School logo"
+                >
+
+                <h3>Shri Ram Global School, Greater Noida West</h3>
+
+                <p><strong>October 2022–Present | Grades 1–5 | CBSE</strong></p>
+
+                <p>
+                    I have spent five years at this school, where I have
+                    served as the ICT Prefect and currently serve as the
+                    ICT Captain. I have also participated in various school
+                    activities, including the Annual Day and other events.
+                </p>
+
+                <a
+                    href="https://srgsnoida.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    School Website ↗
+                </a>
+            </div>
+
+            <div class="glance-card">
+
+              
+                <img
+                    src="data:image/jpeg;base64,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"
+                    width="40"
+                    alt="Helvetia School"
+                >
+
+                <h3>Helvetia School, Guntur</h3>
+
+                <p><strong>March 2019–April 2022 | Pre-K to K2 | CBSE</strong></p>
+
+                <p>
+                    I studied at Helvetia School in Guntur from Pre-K to K2,
+                    building my early learning foundations before moving
+                    on to the next stage of my education.
+                </p>
+
+                <a
+                    href="https://schools.org.in/guntur/28172600330/helvetia-school-g-t-road-guntur-near-tobaco-bord-guntur.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View School Details ↗
+                </a>
+            </div>
+        </section>
+''
+        <hr>
 
         <!-- HOBBIES AND INTERESTS -->
         <section id="my-interests">
-            <h2>My Hobbies & Interests</h2>
+            <h2>My Hobbies &amp; Interests</h2>
+
+            <p>
+                My hobbies are an important part of who I am.
+                They allow me to explore my creativity, develop new
+                skills, expand my knowledge, and discover new ideas.
+                I enjoy activities that challenge me to think, learn,
+                imagine, and create. My four main hobbies are coding,
+                reading, book writing, and studying.
+            </p>
 
             <div class="glance-card">
-                <h3>Coding & Technology</h3>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjncUk4wzUGopFoCdsL0uzliMBBvVENxHKW3ieQqwhlA&s=10"
+                    width="60"
+                    alt="Coding"
+                >
+
+                <h3>Coding</h3>
+
                 <p>
-                    I enjoy learning coding, experimenting with HTML,
-                    and exploring how websites and programs work.
-                    Technology allows me to turn ideas into
-                    interactive projects and discover new ways
-                    to solve problems.
+                    Coding is one of my favourite hobbies because it
+                    allows me to turn ideas into real digital projects.
+                    I enjoy learning how websites work, experimenting
+                    with HTML, and exploring the world of programming.
+                    I like building websites, understanding how
+                    different elements work together, and discovering
+                    how technology can be used to solve problems.
+                    Every new project gives me an opportunity to learn
+                    something different, improve my logical thinking,
+                    and develop my technical skills. I hope to continue
+                    exploring web development and other areas of
+                    technology as I grow.
                 </p>
             </div>
 
             <div class="glance-card">
-                <h3>Space & Astronomy</h3>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYJ5XxXQaY7DpweecxQXPR-Y8UVGdeSkvxM2qJ6PGsQ&s=10"
+                    width="60"
+                    alt="Reading"
+                >
+
+                <h3>Reading</h3>
+
                 <p>
-                    I am fascinated by planets, stars, galaxies,
-                    and the universe. I enjoy learning about
-                    space exploration and discovering the mysteries
-                    of the cosmos.
+                    Reading is a hobby that helps me discover new
+                    ideas, explore different worlds, and learn about
+                    subjects beyond my everyday experiences. I enjoy
+                    reading because books can introduce me to
+                    interesting characters, fascinating facts,
+                    imaginative adventures, and new ways of thinking.
+                    Reading also helps me improve my vocabulary,
+                    develop my language skills, and understand how
+                    writers communicate their ideas. I am especially
+                    interested in stories and subjects that encourage
+                    curiosity and imagination. Every book offers
+                    something new to discover.
                 </p>
             </div>
 
             <div class="glance-card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv3r1VJ_4D22e0Odzn1Qw47QTGqzVH8Ct_k6KTBhQ4xw&s=10"
+                    width="60"
+                    alt="Book Writing"
+                >
+
                 <h3>Book Writing</h3>
+
                 <p>
-                    I enjoy writing stories, creating characters,
-                    imagining new worlds, and turning my ideas
-                    into books. Writing helps me express my
-                    creativity and share my imagination.
+                    Book writing is one of the ways I express my
+                    imagination and creativity. I enjoy developing
+                    story ideas, creating characters, building
+                    fictional worlds, and planning exciting adventures.
+                    Writing allows me to transform thoughts and ideas
+                    into stories that readers can explore. I have
+                    written books such as The Galaxy Escape and
+                    The Rescue, which are available on Bribooks, as
+                    well as Light Years Before Dinosaurs: The Secret
+                    Beneath Delhi, available on Amazon.
+                </p>
+
+                <p>
+                    Working on books teaches me patience, planning,
+                    storytelling, and the importance of revising my
+                    work. I hope to keep writing new stories, exploring
+                    different ideas, and growing as a young author.
                 </p>
             </div>
 
             <div class="glance-card">
-                <h3>Reading & Learning</h3>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6KcLvGhwzgo3d_ualpt2XD7BF1nxynGdLHLR9ZETdg&s=10"
+                    width="60"
+                    alt="Studying"
+                >
+
+                <h3>Studying</h3>
+
                 <p>
-                    Reading helps me explore new ideas,
-                    discover interesting facts, improve my
-                    vocabulary, and learn about different
-                    subjects.
+                    Studying helps me build my knowledge, understand
+                    new concepts, and explore how the world works.
+                    I enjoy learning about different subjects and
+                    discovering connections between what I learn in
+                    school and the world around me. For me, studying
+                    is not only about completing schoolwork or
+                    preparing for examinations. It is also an
+                    opportunity to ask questions, develop critical
+                    thinking, strengthen my understanding, and
+                    discover topics that interest me.
+                </p>
+
+                <p>
+                    I believe that learning something new every day
+                    can help me improve my skills and become a more
+                    knowledgeable person. I try to approach learning
+                    with curiosity and an open mind.
                 </p>
             </div>
 
-            <div class="glance-card">
-                <h3>Astrophotography</h3>
-                <p>
-                    I enjoy exploring the night sky and
-                    capturing astronomical objects with
-                    my family's telescope.
-                </p>
-                <a href="#astrography">View My Astrophotography</a>
-            </div>
+            <p>
+                These four hobbies reflect my interests in learning,
+                creativity, technology, and storytelling. Whether
+                I am writing a new chapter, reading a book, working
+                on a coding project, or studying a new topic, I enjoy
+                the opportunity to discover something new and develop
+                my abilities.
+            </p>
         </section>
 
         <hr>
@@ -195,20 +339,58 @@
         <section id="quick-facts">
             <h2>Quick Facts About Me</h2>
 
-            <div class="glance-card">
-                <p><strong>Name:</strong> Ritvik Sahay</p>
-                <p><strong>School:</strong> Shri Ram Global School</p>
-                <p><strong>Class:</strong> 5G</p>
-                <p><strong>Location:</strong> Greater Noida, India</p>
-                <p><strong>Role:</strong> ICT Captain</p>
-                <p><strong>Interests:</strong> Space, Coding, Writing</p>
-                <p><strong>Website:</strong>
-                    <a href="https://www.ritvik.tech/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        ritvik.tech
-                    </a>
-                </p>
+            <p>
+                Here's a quick look at who I am, what I do,
+                and the things I enjoy.
+            </p>
+
+            <div class="facts-container">
+
+                <article class="fact-card">
+                    <h3>My Role</h3>
+                    <p>ICT Captain</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Location</h3>
+                    <p>Greater Noida, India</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Passion</h3>
+                    <p>Coding and Technology</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Favourite Creative Activity</h3>
+                    <p>Writing Books</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Reading Interest</h3>
+                    <p>Stories and Knowledge</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Science Interest</h3>
+                    <p>Space and Astronomy</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Published Books</h3>
+                    <p>Three Books</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Current Learning Goal</h3>
+                    <p>Building Websites with HTML, CSS and JavaScript</p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>My Favourite Hobbies</h3>
+                    <p>Coding, Reading, Book Writing and Studying</p>
+                </article>
+
             </div>
         </section>
 
@@ -252,7 +434,6 @@
 
             <hr>
 
-            
             <div class="glance-card">
                 <center>
                     <img
@@ -290,18 +471,14 @@
                         alt="Light Years Before Dinosaurs book cover"
                     >
 
-                    <h3>
-                        Light Years Before Dinosaurs:
-                        The Secret Beneath Delhi
-                    </h3>
+                    <h3>Light Years Before Dinosaurs: The Secret Beneath Delhi</h3>
 
                     <p>
                         Aarav thought he was heading into an ordinary
                         school holiday. Instead, he discovers a hidden
                         alien city buried beneath Delhi, meets a
-                        pizza-loving alien named Floof, and finds
-                        himself caught in a secret that could
-                        change Earth forever.
+                        pizza-loving alien named Floof, and finds himself
+                        caught in a secret that could change Earth forever.
                     </p>
 
                     <a
@@ -409,9 +586,6 @@
                 </p>
 
                 <a
-
-
-                <a
                     href="https://solar-system-explorer-one.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -500,30 +674,26 @@
             <h2>Astrography</h2>
 
             <div class="glance-card">
-                <h2>Jaipur Night Sky</h2>
+                  <h2>Jaipur Night Sky</h2>
 
-                <p>
-                    A collection of night-sky photographs I captured
-                    during my visit to Jaipur, Rajasthan.
-                </p>
+    <p>
+        A collection of night-sky photographs I captured
+        during my visit to Jaipur, Rajasthan.
+    </p>
 
-                <a
-                    href="https://drive.google.com/file/d/1DQmWOXhTadXQjjqhj4OiDAHzlRTL-FDg/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Photos
-                </a>
+    <a href="https://drive.google.com/file/d/1DQmWOXhTadXQjjqhj4OiDAHzlRTL-FDg/view?usp=sharing"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Photos
+    </a>
+                    >
 
-                <h3>Jaipur Night Sky: Astrophotography</h3>
+                    <h3>Jaipur Night Sky: Astrophotography</h3>
 
-                <p>
-                    A collection of night-sky photographs I captured
-                    during my visit to Jaipur, Rajasthan. These
-                    photographs preserve moments from beneath the
-                    night sky and reflect my curiosity about
-                    astronomy and the universe.
-                </p>
+ <p>
+A collection of night-sky photographs I captured during my visit to Jaipur, Rajasthan. These photographs preserve moments from beneath the night sky and reflect my curiosity about astronomy and the universe.
+</p>
+                </center>
             </div>
 
             <div class="gallery-note">
@@ -540,8 +710,8 @@
                         Due to light pollution in my area, capturing
                         clear night-sky photographs can be challenging.
                         For now, I've added one photograph, but I hope
-                        to capture and share more celestial wonders
-                        in the future.
+                        to capture and share more celestial wonders in
+                        the future.
                     </p>
 
                     <p>
@@ -552,52 +722,57 @@
             </div>
         </section>
 
-    <hr>
 
-<!-- THE RITVIK COLLECTION -->
-<section id="ritvik-collection">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Store heading -->
-    <div class="collection-header">
+    <title>The Ritvik Collection | Books & Creations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#my-books">My Books</a>
+            <a href="#more-books">More Books</a>
+            <a href="#book-order">Order a Book</a>
+        </nav>
+
         <img
             src="https://i.ibb.co/gMJvLmMQ/Ritvik-s-Gold-Monogram-Collection.png"
             alt="The Ritvik Collection logo"
-            class="collection-logo">
+            width="150">
 
-        <p class="collection-tagline">
-            Books &amp; Creations by Ritvik Sahay
-        </p>
+        <p>Books & Creations by Ritvik Sahay</p>
+    </header>
 
-        <nav class="collection-nav" aria-label="Store navigation">
-            <a href="#collection-home">Home</a>
-            <a href="#collection-books">My Books</a>
-            <a href="#collection-more">More Books</a>
-            <a href="#collection-order">Order a Book</a>
-        </nav>
-    </div>
+    <hr>
 
-    <!-- Welcome -->
-    <div id="collection-home" class="collection-home">
+    <section id="home" class="home">
         <h2>Welcome to The Ritvik Collection</h2>
 
         <p>
             Discover books, digital products, and creations
             by Ritvik Sahay.
         </p>
-    </div>
+    </section>
 
-    <hr class="collection-divider">
-
-    <!-- Main book -->
-    <div id="collection-books" class="collection-books">
+    <section id="my-books" class="books">
         <h2>My Books</h2>
 
-        <div class="collection-card">
+        <div class="glance-card">
 
-            <img
-                src="https://i.ibb.co/1ffNz4rQ/LYBD-BOOK-removebg-preview.png"
-                alt="Light Years Before Dinosaurs book cover"
-                class="collection-book-cover">
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/1ffNz4rQ/LYBD-BOOK-removebg-preview.png"
+                    alt="Light Years Before Dinosaurs book cover"
+                    border="0">
+            </a>
 
             <h3>
                 Light Years Before Dinosaurs:
@@ -612,41 +787,36 @@
                 India's capital. Alongside Floof, an unusual
                 alien companion, Aarav faces mysterious
                 technology, powerful warships, and dangerous
-
                 robots in a mission that could change everything.
 
                 Are you ready to uncover the secret
                 beneath Delhi?
             </p>
 
-            <div class="collection-price">
-                <h3>Digital Edition</h3>
+            <div class="glance-card">
+                <h2>Digital Edition</h2>
                 <p><strong>Price:</strong> ₹79</p>
 
-                <h3>Physical Copy</h3>
+                <h2>Physical Copy</h2>
                 <p>
                     <strong>Price:</strong> ₹199
                     (Delivery charges may vary.)
                 </p>
             </div>
 
-            <a href="#collection-order" class="collection-button">
-                Request This Book
-            </a>
+            <a href="#book-order">Request This Book</a>
 
         </div>
-    </div>
+    </section>
 
-    <!-- Ordering process -->
-    <div class="collection-process">
+    <section id="book-process">
 
-        <div class="collection-card">
-
+        <div class="glance-card">
             <h2>The Process of Physical Copy</h2>
 
             <p>
                 1) Submit the book request form at the bottom
-                of this section.
+                of this page.
             </p>
 
             <p>
@@ -661,12 +831,12 @@
             </p>
 
             <p>
-                4) Once you receive the book, you can record
-                an unboxing video and share it with me if you wish.
+                4) Once you receive the book, you can record an
+                unboxing video and share it with me if you wish.
                 This is completely optional!
             </p>
 
-            <hr class="collection-divider">
+            <hr>
 
             <h2>The Process of E-book</h2>
 
@@ -689,25 +859,23 @@
                 4) After the payment is confirmed, I will arrange
                 access to the e-book and send you the instructions.
             </p>
-
         </div>
 
-    </div>
+    </section>
 
-    <hr class="collection-divider">
+    <hr>
 
-    <!-- More books -->
-    <div id="collection-more" class="collection-books">
-
+    <section id="more-books" class="books">
         <h2>More Books by Ritvik</h2>
 
-        <!-- The Rescue -->
-        <div class="collection-card">
+        <div class="glance-card">
 
-            <img
-                src="https://i.ibb.co/4wHCKC2G/th-E-RESCUE-BOOK-removebg-preview.png"
-                alt="The Rescue book cover"
-                class="collection-book-cover">
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/4wHCKC2G/th-E-RESCUE-BOOK-removebg-preview.png"
+                    alt="The Rescue book cover"
+                    border="0">
+            </a>
 
             <h3>The Rescue</h3>
 
@@ -724,19 +892,18 @@
                 provided by BriBooks.
             </p>
 
-            <a href="#collection-order" class="collection-button">
-                Request This Book
-            </a>
+            <a href="#book-order">Request This Book</a>
 
         </div>
 
-        <!-- The Galaxy Escape -->
-        <div class="collection-card">
+        <div class="glance-card">
 
-            <img
-                src="https://i.ibb.co/WN2gQHph/THE-GALAXY-ESCAOE-BOOK-removebg-preview.png"
-                alt="The Galaxy Escape book cover"
-                class="collection-book-cover">
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/WN2gQHph/THE-GALAXY-ESCAOE-BOOK-removebg-preview.png"
+                    alt="The Galaxy Escape book cover"
+                    border="0">
+            </a>
 
             <h3>The Galaxy Escape</h3>
 
@@ -752,19 +919,14 @@
                 provided by BriBooks.
             </p>
 
-            <a href="#collection-order" class="collection-button">
-                Request This Book
-            </a>
+            <a href="#book-order">Request This Book</a>
 
         </div>
+    </section>
 
-    </div>
+    <hr>
 
-    <hr class="collection-divider">
-
-    <!-- Order form -->
-    <div id="collection-order" class="collection-order">
-
+    <section id="book-order" class="books">
         <h2>Order a Book</h2>
 
         <p>
@@ -773,7 +935,8 @@
         </p>
 
         <iframe
-            id="collection-order-form"
+            id="ziframe_911128"
+            aria-label="The Ritvik Collection | Book Order Request"
             title="The Ritvik Collection | Book Order Request"
             src="https://forms.zohopublic.in/agentritvikgm1/form/OrderaBook/formperma/r2Mz7-FLKI0BcplP4i_VdEmEH2zZMyEMJMSvM0Ewt8Y"
             width="100%"
@@ -781,20 +944,244 @@
             style="border: none;"
             loading="lazy">
         </iframe>
+    </section>
 
-    </div>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Store footer -->
-    <footer class="collection-footer">
+    <title>The Ritvik Collection | Books & Creations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#my-books">My Books</a>
+            <a href="#more-books">More Books</a>
+            <a href="#book-order">Order a Book</a>
+        </nav>
 
         <img
             src="https://i.ibb.co/gMJvLmMQ/Ritvik-s-Gold-Monogram-Collection.png"
             alt="The Ritvik Collection logo"
-            class="collection-footer-logo">
+            width="150">
+
+        <p>Books & Creations by Ritvik Sahay</p>
+    </header>
+
+    <hr>
+
+    <section id="home" class="home">
+        <h2>Welcome to The Ritvik Collection</h2>
+
+        <p>
+            Discover books, digital products, and creations
+            by Ritvik Sahay.
+        </p>
+    </section>
+
+    <section id="my-books" class="books">
+        <h2>My Books</h2>
+
+        <div class="glance-card">
+
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/1ffNz4rQ/LYBD-BOOK-removebg-preview.png"
+                    alt="Light Years Before Dinosaurs book cover"
+                    border="0">
+            </a>
+
+            <h3>
+                Light Years Before Dinosaurs:
+                The Secret Beneath Delhi
+            </h3>
+
+            <p>
+                What secrets lie beneath the streets of Delhi?
+
+                Join Aarav on an extraordinary adventure as
+                he discovers a hidden alien city beneath
+                India's capital. Alongside Floof, an unusual
+                alien companion, Aarav faces mysterious
+                technology, powerful warships, and dangerous
+                robots in a mission that could change everything.
+
+                Are you ready to uncover the secret
+                beneath Delhi?
+            </p>
+
+            <div class="glance-card">
+                <h2>Digital Edition</h2>
+                <p><strong>Price:</strong> ₹79</p>
+
+                <h2>Physical Copy</h2>
+                <p>
+                    <strong>Price:</strong> ₹199
+                    (Delivery charges may vary.)
+                </p>
+            </div>
+
+            <a href="#book-order">Request This Book</a>
+
+        </div>
+    </section>
+
+    <section id="book-process">
+
+        <div class="glance-card">
+            <h2>The Process of Physical Copy</h2>
+
+            <p>
+                1) Submit the book request form at the bottom
+                of this page.
+            </p>
+
+            <p>
+                2) I will contact you using your preferred
+                contact method and send you the next steps.
+            </p>
+
+            <p>
+                3) Once payment is confirmed, Printvity will
+                print the book and ship it to you.
+                Delivery charges may vary.
+            </p>
+
+            <p>
+                4) Once you receive the book, you can record an
+                unboxing video and share it with me if you wish.
+                This is completely optional!
+            </p>
+
+            <hr>
+
+            <h2>The Process of E-book</h2>
+
+            <p>
+                1) Submit the book request form and select
+                the e-book edition.
+            </p>
+
+            <p>
+                2) I will contact you using your preferred
+                contact method and send you the payment details.
+            </p>
+
+            <p>
+                3) Complete the payment and let me know
+                once it is done.
+            </p>
+
+            <p>
+                4) After the payment is confirmed, I will arrange
+                access to the e-book and send you the instructions.
+            </p>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="more-books" class="books">
+        <h2>More Books by Ritvik</h2>
+
+        <div class="glance-card">
+
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/4wHCKC2G/th-E-RESCUE-BOOK-removebg-preview.png"
+                    alt="The Rescue book cover"
+                    border="0">
+            </a>
+
+            <h3>The Rescue</h3>
+
+            <p>
+                Discover another story by Ritvik Sahay!
+                The Rescue is a mystery adventure with a
+                space-themed spark.
+            </p>
+
+            <p>
+                <strong>Price Notice:</strong>
+                The price is set by BriBooks, not by me.
+                Please check the price and ordering details
+                provided by BriBooks.
+            </p>
+
+            <a href="#book-order">Request This Book</a>
+
+        </div>
+
+        <div class="glance-card">
+
+            <a href="https://imgbb.com/">
+                <img
+                    src="https://i.ibb.co/WN2gQHph/THE-GALAXY-ESCAOE-BOOK-removebg-preview.png"
+                    alt="The Galaxy Escape book cover"
+                    border="0">
+            </a>
+
+            <h3>The Galaxy Escape</h3>
+
+            <p>
+                Explore another published book by Ritvik Sahay
+                and discover a story inspired by space.
+            </p>
+
+            <p>
+                <strong>Price Notice:</strong>
+                The price is set by BriBooks, not by me.
+                Please check the price and ordering details
+                provided by BriBooks.
+            </p>
+
+            <a href="#book-order">Request This Book</a>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="book-order" class="books">
+        <h2>Order a Book</h2>
+
+        <p>
+            Select the book you are interested in and submit
+            your request. I will contact you with the next steps.
+        </p>
+
+        <iframe
+            id="ziframe_911128"
+            aria-label="The Ritvik Collection | Book Order Request"
+            title="The Ritvik Collection | Book Order Request"
+            src="https://forms.zohopublic.in/agentritvikgm1/form/OrderaBook/formperma/r2Mz7-FLKI0BcplP4i_VdEmEH2zZMyEMJMSvM0Ewt8Y"
+            width="100%"
+            height="1000"
+            style="border: none;"
+            loading="lazy">
+        </iframe>
+    </section>
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+
+        <img
+            src="https://i.ibb.co/gMJvLmMQ/Ritvik-s-Gold-Monogram-Collection.png" width= "80"
+            alt="The Ritvik Collection logo"
+            class="footer-logo">
 
         <h2>The Ritvik Collection</h2>
 
-        <p class="collection-tagline">
+        <p class="footer-tagline">
             Books &amp; Creations by Ritvik Sahay
         </p>
 
@@ -802,11 +1189,11 @@
             Discover stories, explore ideas, and imagine beyond the stars.
         </p>
 
-        <nav class="collection-footer-links" aria-label="Store footer navigation">
-            <a href="#collection-home">Home</a>
-            <a href="#collection-books">My Books</a>
-            <a href="#collection-more">More Books</a>
-            <a href="#collection-order">Order a Book</a>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#my-books">My Books</a>
+            <a href="#more-books">More Books</a>
+            <a href="#book-order">Order a Book</a>
             <a href="/">My Portfolio</a>
         </nav>
 
@@ -818,30 +1205,43 @@
         </p>
 
         <p>
-            <a
-                href="https://github.com/ritviksahay-lab"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <a href="https://github.com/ritviksahay-lab"
+               target="_blank"
+               rel="noopener noreferrer">
                 View my GitHub
             </a>
         </p>
 
-        <hr class="collection-divider">
+        <hr>
 
-        <p class="collection-copyright">
+        <p class="copyright">
             &copy; 2026 The Ritvik Collection. All rights reserved.
         </p>
 
-        <p class="collection-footer-note">
+        <p class="footer-note">
             BriBooks titles are ordered through BriBooks.
             Prices for those titles are set by BriBooks.
         </p>
 
-    </footer>
+    </div>
+</footer>
 
-</section>
-<!-- END THE RITVIK COLLECTION -->
+</body>
+</html>
+
+
+</body>
+</html>
+
+
+
+        <p><small>No spam. It's a promise.</small></p>
+    </center>
+</div>
+
+    </main>
+
+    <hr>
 
     <!-- FOOTER -->
     <footer>
@@ -853,7 +1253,7 @@
             >
 
             <p>© 2026 Ritvik Sahay. All rights reserved.</p>
-            <p>Last Edited on October 20 2026</p>
+            <p>Last Edited on October 18 2026</p>
 
             <p>
                 <a
@@ -877,8 +1277,6 @@
             </p>
         </center>
     </footer>
-
-    </main>
 
 </body>
 </html>
