@@ -1,51 +1,140 @@
 
-/* =====================================
-   COLOURFUL PORTFOLIO
-   White background + colourful hover
-===================================== */
+/* ==========================================
+   RITVIK'S PORTFOLIO
+   White + Colourful + Gold Accents
+   Final cleaned and responsive stylesheet
+========================================== */
 
-/* Keep the original white background */
+/* ---------- GLOBAL STYLES ---------- */
 
-html,
-body {
-    background: #FFFFFF !important;
-    color: #222222;
+html {
+    background: #FFFFFF;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
-/* Colourful headings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background: #FFFFFF !important;
+    color: #222222;
+    text-align: center;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- HEADINGS ---------- */
 
 h1 {
     color: #6546D7;
+    line-height: 1.25;
 }
 
 h2 {
     color: #2878D0;
+    line-height: 1.3;
 }
 
 h3 {
     color: #E76B45;
+    line-height: 1.4;
 }
 
-/* Colourful navigation hover */
+p {
+    line-height: 1.8;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+    color: #6546D7;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: #E76B45;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    padding: 18px 24px;
+    text-align: left;
+    background: #FFFFFF;
+    border-bottom: 2px solid #E5DFFF;
+}
 
 nav a {
+    display: inline-block;
     color: #444444;
+    font-weight: bold;
+    margin: 4px 8px 4px 0;
+    padding: 7px 10px;
     border-radius: 8px;
-    padding: 6px 9px;
-    transition: all 0.25s ease;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-nav a:hover {
-    background: #E9E1FF;
+@media (hover: hover) {
+    nav a:hover {
+        background: #E9E1FF;
+        color: #6546D7;
+        transform: translateY(-2px);
+    }
+}
+
+/* ---------- HOME / WELCOME ---------- */
+
+.home {
+    text-align: center;
+    padding: 70px 24px;
+    background: #FFFFFF;
+}
+
+.home h1 {
     color: #6546D7;
-    transform: translateY(-3px);
-    text-decoration: none;
+    font-size: clamp(30px, 5vw, 48px);
 }
 
-/* Keep the website sections white */
+.home h2 {
+    color: #2878D0;
+    font-size: clamp(25px, 4vw, 36px);
+}
+
+.home p {
+    color: #444444;
+    font-size: 18px;
+    max-width: 850px;
+    margin: 16px auto;
+}
+
+/* ---------- MAIN SECTIONS ---------- */
+
+main {
+    width: 100%;
+    padding: 0 16px;
+}
 
 main > section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 30px;
     background: #FFFFFF;
+    color: #222222;
     border: 1px solid #E8E8EE;
     border-radius: 14px;
     transition:
@@ -54,29 +143,62 @@ main > section {
         border-color 0.3s ease;
 }
 
-/* Whole sections gently float */
-
 @media (hover: hover) {
     main > section:hover {
-        transform: translateY(-4px);
+        transform: translateY(-3px);
         border-color: #B9A7FF;
-        box-shadow: 0 10px 25px rgba(101, 70, 215, 0.10);
+        box-shadow: 0 10px 25px
+            rgba(101, 70, 215, 0.10);
     }
 }
 
-/* Colourful glance cards */
+/* ---------- BOOKS SECTION ---------- */
+
+.books {
+    text-align: center;
+    padding: 40px 20px;
+    background: #FFFFFF;
+}
+
+.books img {
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+    .books img:hover {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+}
+
+.books h2 {
+    color: #6546D7;
+    margin-top: 24px;
+}
+
+/* ---------- GLANCE CARDS ---------- */
 
 .glance-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 18px 0;
+    padding: 24px;
     background: #FFFFFF;
+    color: #222222;
     border: 2px solid #FFD166;
     border-radius: 14px;
+    overflow-wrap: break-word;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
-        background-color 0.3s ease;
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* Give different cards different accent colours */
+/* Alternating accent colours */
 
 .glance-card:nth-of-type(4n + 1) {
     border-color: #FF8585;
@@ -94,25 +216,46 @@ main > section {
     border-color: #FFBF69;
 }
 
-/* Cards float when hovered */
+.glance-card h3 {
+    margin: 8px 0 14px;
+}
+
+.glance-card p {
+    margin: 10px 0 14px;
+    line-height: 1.8;
+}
+
+.glance-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 8px 0;
+    border-radius: 8px;
+}
 
 @media (hover: hover) {
     .glance-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-5px);
         background: #FFFEFA;
-        box-shadow: 0 12px 25px rgba(40, 40, 70, 0.12);
+        box-shadow: 0 12px 25px
+            rgba(40, 40, 70, 0.12);
     }
 }
 
-/* Colourful Quick Facts cards */
+/* ---------- QUICK FACTS CARDS ---------- */
 
 .fact-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 18px 0;
+    padding: 24px;
     background: #F5F0FF;
+    color: #29233D;
     border: 1px solid #C9B9FF;
     border-radius: 14px;
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 .fact-card:nth-child(4n + 2) {
@@ -130,50 +273,30 @@ main > section {
     border-color: #F2D66D;
 }
 
+.fact-card h3 {
+    margin: 8px 0 14px;
+}
+
+.fact-card p {
+    margin: 10px 0 14px;
+    line-height: 1.8;
+}
+
 @media (hover: hover) {
     .fact-card:hover {
-        transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 10px 22px rgba(40, 40, 70, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 22px
+            rgba(40, 40, 70, 0.12);
     }
 }
 
-/* Colourful links */
-
-a {
-    color: #6546D7;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #E76B45;
-}
-
-/* Colourful buttons */
-
-button,
-.astro-subscribe-button {
-    background: linear-gradient(135deg, #FFE66D, #FFB86B);
-    color: #222222;
-    border: 1px solid #F0AD35;
-    border-radius: 9px;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        filter 0.25s ease;
-}
-
-@media (hover: hover) {
-    button:hover,
-    .astro-subscribe-button:hover {
-        transform: translateY(-4px);
-        filter: saturate(1.15);
-        box-shadow: 0 7px 18px rgba(231, 107, 69, 0.20);
-    }
-}
-
-/* Keep the astrophotography warning red */
+/* ---------- ASTROPHOTOGRAPHY WARNING ---------- */
 
 .gallery-note {
+    width: 100%;
+    max-width: 100%;
+    margin: 22px 0;
+    padding: 24px;
     background: #FFF5F5;
     color: #333333;
     border: 2px solid #EF4444;
@@ -188,16 +311,70 @@ button,
     color: #D92D3A;
 }
 
+.gallery-note p {
+    line-height: 1.8;
+}
+
+.gallery-note img {
+    max-width: 100%;
+    height: auto;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
 @media (hover: hover) {
     .gallery-note:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 22px rgba(239, 68, 68, 0.12);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px
+            rgba(239, 68, 68, 0.12);
     }
 }
 
-/* White footer */
+/* ---------- BUTTONS ---------- */
+
+button,
+.astro-subscribe-button {
+    display: inline-block;
+    padding: 11px 20px;
+    background: linear-gradient(
+        135deg,
+        #FFE66D,
+        #FFB86B
+    );
+    color: #222222;
+    border: 1px solid #F0AD35;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+@media (hover: hover) {
+    button:hover,
+    .astro-subscribe-button:hover {
+        transform: translateY(-3px);
+        filter: saturate(1.12);
+        box-shadow: 0 7px 18px
+            rgba(231, 107, 69, 0.20);
+    }
+}
+
+button:focus-visible,
+.astro-subscribe-button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #6546D7;
+    outline-offset: 3px;
+}
+
+/* ---------- FOOTER ---------- */
 
 footer {
+    padding: 24px 20px;
     background: #FFFFFF;
     color: #333333;
     border-top: 2px solid #E5DFFF;
@@ -205,15 +382,64 @@ footer {
 
 footer p {
     color: #555555;
+    margin: 8px 0;
+    line-height: 1.7;
 }
 
-/* Smooth scrolling */
+/* ---------- MOBILE RESPONSIVENESS ---------- */
 
-html {
-    scroll-behavior: smooth;
+@media (max-width: 600px) {
+    nav {
+        padding: 14px 12px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 3px;
+        padding: 7px 8px;
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 45px 16px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    main > section {
+        padding: 20px 16px;
+        margin: 18px auto;
+        border-radius: 12px;
+    }
+
+    .glance-card,
+    .fact-card,
+    .gallery-note {
+        padding: 18px;
+        margin: 16px 0;
+    }
+
+    .books {
+        padding: 28px 12px;
+    }
+
+    .books img {
+        width: 190px;
+    }
+
+    button,
+    .astro-subscribe-button {
+        max-width: 100%;
+    }
 }
 
-/* Respect reduced-motion preferences */
+/* ---------- REDUCED MOTION ACCESSIBILITY ---------- */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -223,151 +449,9 @@ html {
     *,
     *::before,
     *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
-
-
-/* FIX: RESTORE COMFORTABLE SPACING */
-
-/* Add room inside every main section */
-main > section {
-    padding: 30px !important;
-    margin: 28px auto !important;
-}
-
-/* Stop card content touching the borders */
-.glance-card,
-.fact-card,
-.gallery-note {
-    padding: 24px !important;
-    margin: 22px auto !important;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Give headings some breathing room */
-.glance-card h3,
-.fact-card h3,
-.gallery-note h3 {
-    margin-top: 8px;
-    margin-bottom: 14px;
-}
-
-/* Improve paragraph spacing */
-.glance-card p,
-.fact-card p,
-.gallery-note p {
-    margin-top: 10px;
-    margin-bottom: 14px;
-    line-height: 1.8;
-}
-
-/* Keep images away from nearby text */
-.glance-card img,
-.gallery-note img {
-    margin: 8px;
-}
-
-/* Comfortable spacing on smaller screens */
-@media (max-width: 600px) {
-    main > section {
-        padding: 20px 16px !important;
-        margin: 18px auto !important;
-    }
-
-    .glance-card,
-    .fact-card,
-    .gallery-note {
-        padding: 18px !important;
-        margin: 18px auto !important;
-    }
-}
-
-
-/* Whole website */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    background-color: #080808;
-    color: #F5D76E;
-    text-align: center;
-}
-
-/* Navigation bar */
-nav {
-    padding: 20px;
-    text-align: left;
-    background-color: #101010;
-    border-bottom: 1px solid #B89635;
-}
-
-/* Navigation links */
-nav a {
-    color: #E8C75A;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-/* When someone points at a link */
-nav a:hover {
-    color: white;
-}
-
-/* Welcome section */
-.home {
-    text-align: center;
-    padding: 70px 20px;
-    background-color: #080808;
-}
-
-/* Welcome heading */
-.home h2 {
-    color: #FFD966;
-    font-size: 36px;
-}
-
-/* Welcome paragraph */
-.home p {
-    color: #E6D7A8;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* Books section */
-.books {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-/* Book cover image */
-.books img {
-    width: 220px;
-    max-width: 90%;
-    height: auto;
-    transform: rotate(-5deg);
-}
-
-/* Book title */
-.books h2 {
-    color: #FFD966;
-    margin-top: 25px;
-}
-
-.glance-card {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px;
-    margin: 20px;
-    border: 05px solid #B89635;
-    border-color: #F5D76E;
-    border-radius: 10px;
-}
-a:hover {
-    color: #ffbf00;
-}
-
-
