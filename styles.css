@@ -455,3 +455,52 @@ footer p {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* HOME INTRODUCTION: DARK TEXT */
+
+#home {
+    background: #FFFFFF !important;
+    color: #222222 !important;
+}
+
+#home h1,
+#home h2,
+#home h3 {
+    color: #29213F !important;
+}
+
+#home p {
+    color: #333333 !important;
+}
+
+/* LOCATION TEXT */
+
+#home p strong {
+    color: #222222 !important;
+}
+
+/* VISIT MY BLOG SECTION */
+
+#my-blog {
+    background: #FFFFFF !important;
+    color: #222222 !important;
+}
+
+#my-blog h1,
+#my-blog h2,
+#my-blog h3 {
+    color: #29213F !important;
+}
+
+#my-blog p {
+    color: #333333 !important;
+}
+
+#my-blog a {
+    color: #3D327A;
+}
+
+#my-blog a:hover {
+    color: #D35436;
+}
