@@ -1068,6 +1068,50 @@
     </footer>
 
 </body>
+    
+<!-- Floating Home Button -->
+<a href="/" class="floating-home" aria-label="Go to Home" title="Home">
+  &#8962;
+</a>
+
+<style>
+  .floating-home {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffcc00;
+    color: #111111;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+  }
+
+  .floating-home:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 600px) {
+    .floating-home {
+      width: 46px;
+      height: 46px;
+      bottom: 16px;
+      right: 16px;
+      font-size: 27px;
+    }
+  }
+</style>
+
 
 </html>
 ```
