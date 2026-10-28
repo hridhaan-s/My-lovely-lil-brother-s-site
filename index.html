@@ -733,8 +733,44 @@
 
             </div>
 <h2>Subscribe to my astrophotography updates</h2>
-            <iframe aria-label='AstroGraphy Weekly Updates Subscription' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.in/agentritvikgm1/form/AstroGraphyWeeklyUpdatesSubscription/formperma/ldt6-hPt-E-mB2e9w1N0iwnz7_s6aGADETQhv88A7hg' >
+          <iframe id="ziframe_218936" aria-label="AstroGraphy Weekly Updates Subscription" frameborder="0"     style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.in/agentritvikgm1/form/AstroGraphyWeeklyUpdatesSubscription1/formperma/rUPgfe7_ijMakryMvfhUoDEEHPYdpdbFLLFmufZrDZY'>    
 </iframe>
+
+<script type="text/javascript">
+(function() {
+  try {
+    var zf_frame = document.getElementById("ziframe_218936");
+    var ifrmSrc = zf_frame.src;
+        
+        if (!((new RegExp("[?&]referrername=")).test(ifrmSrc))) {
+            var rfr = window.location.href;
+            
+            try { 
+                rfr = window.self !== window.top ? 
+                    window.top.location.href : 
+                    (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
+            } catch (e) {}
+            
+            if (rfr && rfr !== "") {
+                if (rfr.length > 1800) {
+                    var queryIndex = rfr.indexOf('?');
+                    if (queryIndex > -1) {
+                        rfr = rfr.substring(0, queryIndex);
+                    }
+                    if (rfr.length > 1800) {
+                        rfr = rfr.substring(0, 1800);
+                    }
+                }
+                ifrmSrc += ((ifrmSrc.indexOf('?') > 0) ? '&' : '?') + 'referrername=' + encodeURIComponent(rfr);
+            }
+        }
+        if (zf_frame.src !== ifrmSrc) {
+            zf_frame.src = ifrmSrc;
+        }
+  } catch (e) {}
+})();
+</script>
+
 
         </section>
 
